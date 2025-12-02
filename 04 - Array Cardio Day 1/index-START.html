@@ -61,7 +61,7 @@
     const sortedAge = inventors.sort(function(a,b){
       const ageA = a.passed - a.year;
       const ageB = b.passed - b.year;
-      if (ageB > ageB){
+      if (ageB > ageA){
         return 1;
       }
       else{
@@ -74,6 +74,13 @@
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+
+    //this line grabs the container of the links
+    const category = document.querySelector(".mw-category");
+    //this line actually grabs the links themselves and puts them into an array instead of a NodeList, so that we can use Array methods
+    const links = Array.from(category.querySelector("a"));
+    //adds all of the the boulevards to a list
+    const de = links.map(link => link.textContent);
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
