@@ -90,8 +90,10 @@ const sortedAlpha = people.sort(function (a,b){
       const [alast, afirst] = a.split(", ");
       const [blast, bfirst] = b.split(", ");
 
-      return alast > blast ? -1 : 1;
+      return alast < blast ? -1 : 1;
 });
+
+console.log(sortedAlpha);
     // 8. Reduce Exercise
     // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
