@@ -76,18 +76,25 @@
 
 
     //this line grabs the container of the links
-    const category = document.querySelector(".mw-category");
+   // const category = document.querySelector('.mw-category');
     //this line actually grabs the links themselves and puts them into an array instead of a NodeList, so that we can use Array methods
-    const links = Array.from(category.querySelector("a"));
-    //adds all of the the boulevards to a list
-    const de = links.map(link => link.textContent);
+    // const links = Array.from(category.querySelectorAll('a'));
+    // //adds all of the the boulevards to a list
+    // const de = links
+    //             .map(link => link.textContent)
+    //             .filter(link => link.includes("de"));
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+const sortedAlpha = people.sort(function (a,b){
+      const [alast, afirst] = a.split(", ");
+      const [blast, bfirst] = b.split(", ");
 
+      return alast > blast ? -1 : 1;
+});
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
   </script>
 </body>
