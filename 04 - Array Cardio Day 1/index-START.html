@@ -98,6 +98,12 @@ console.log(sortedAlpha);
     // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+const cleanData = data.reduce(function (acc, curr){
+    if (!acc.includes(curr)){
+      acc.push(curr);
+    }
+    return acc;
+}, []);
   </script>
 </body>
 </html>
